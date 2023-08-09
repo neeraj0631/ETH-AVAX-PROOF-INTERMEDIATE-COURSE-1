@@ -14,7 +14,7 @@ contract ErrorHandlerContract {
         return "Product is in cart now meanwhile you can proceed further";
     }
 
-    function customAssertCondition(uint _value) public pure {
+    function customAssertCondition(uint _value) public pure returns (string memory) {
         assert(_value > 0 && _value < 100);
         return "Custom error message: Value must be between 1 and 99";
     }
