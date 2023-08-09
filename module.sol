@@ -15,7 +15,8 @@ contract ErrorHandlerContract {
     }
 
     function customAssertCondition(uint _value) public pure {
-        require(_value > 0 && _value < 100, "Custom error message: Value must be between 1 and 99");
+        assert(_value > 0 && _value < 100);
+        return "Custom error message: Value must be between 1 and 99";
     }
 
     function customRevertCondition(uint _balance, uint _amount) public pure {
